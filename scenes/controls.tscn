@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://j0ynbo8lik8n"]
+
+[ext_resource type="Script" uid="uid://pvgoj5keh2g4" path="res://scripts/controls.gd" id="1_i2gav"]
+
+[sub_resource type="SystemFont" id="SystemFont_3vx0d"]
+
+[sub_resource type="Theme" id="Theme_3vx0d"]
+
+[sub_resource type="SystemFont" id="SystemFont_i2gav"]
+
+[node name="Controls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i2gav")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.5568628, 0.27450982, 1)
+theme_override_font_sizes/font_size = 36
+text = "Controls"
+horizontal_alignment = 1
+
+[node name="ControlsLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.43529412, 0.56078434, 0.47843137, 1)
+theme_override_fonts/font = SubResource("SystemFont_3vx0d")
+theme_override_font_sizes/font_size = 24
+text = "   Move: WASD / Arrow Keys
+   Vacuum: Left Mouse Button
+   Quit: Esc"
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_3vx0d")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.43529412, 0.56078434, 0.47843137, 1)
+theme_override_fonts/font = SubResource("SystemFont_i2gav")
+theme_override_font_sizes/font_size = 24
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

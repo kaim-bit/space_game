@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://be8qbmt0fe144"]
+
+[ext_resource type="Texture2D" uid="uid://13qalbi527sr" path="res://images/sun-1.png (3).png" id="1_cojbh"]
+[ext_resource type="Script" uid="uid://bqnsqcadhplyi" path="res://scripts/game/sun.gd" id="1_fdjia"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fdjia"]
+radius = 66.37017
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6gpmc"]
+radius = 300.0
+
+[node name="Sun" type="Node2D"]
+
+[node name="Sun" type="Area2D" parent="."]
+script = ExtResource("1_fdjia")
+
+[node name="SunSprite" type="Sprite2D" parent="Sun"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cojbh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sun"]
+shape = SubResource("CircleShape2D_fdjia")
+
+[node name="Camera2D" type="Camera2D" parent="Sun"]
+zoom = Vector2(0.5, 0.5)
+
+[node name="VacuumArea" type="Area2D" parent="Sun"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sun/VacuumArea"]
+shape = SubResource("CircleShape2D_6gpmc")

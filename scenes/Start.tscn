@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=3 uid="uid://sfu3t31qpxbp"]
+
+[ext_resource type="Script" uid="uid://dme6e5pm6rmn2" path="res://scripts/start_menu.gd" id="1_8t08e"]
+
+[sub_resource type="Theme" id="Theme_crxfe"]
+
+[sub_resource type="SystemFont" id="SystemFont_8t08e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fx3ca"]
+
+[sub_resource type="Theme" id="Theme_j3bqk"]
+
+[sub_resource type="SystemFont" id="SystemFont_fx3ca"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yx83k"]
+
+[sub_resource type="Theme" id="Theme_lynlw"]
+
+[sub_resource type="SystemFont" id="SystemFont_j3bqk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h1lxu"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8t08e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Game" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13475478, 0.5562947, 0.27542284, 1)
+theme_override_font_sizes/font_size = 36
+text = "The Sun Is a Vacuum Cleaner"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_crxfe")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.43679997, 0.56, 0.47786668, 1)
+theme_override_fonts/font = SubResource("SystemFont_8t08e")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_fx3ca")
+text = "Start"
+
+[node name="Controls" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_j3bqk")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.43529412, 0.56078434, 0.47843137, 1)
+theme_override_fonts/font = SubResource("SystemFont_fx3ca")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_yx83k")
+text = "Controls"
+
+[node name="End" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_lynlw")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.43529412, 0.56078434, 0.47843137, 1)
+theme_override_fonts/font = SubResource("SystemFont_j3bqk")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_h1lxu")
+text = "End"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="VBoxContainer/End" to="." method="_on_end_pressed"]
