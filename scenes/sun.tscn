@@ -1,15 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://be8qbmt0fe144"]
+[gd_scene load_steps=8 format=3 uid="uid://be8qbmt0fe144"]
 
 [ext_resource type="Texture2D" uid="uid://13qalbi527sr" path="res://images/sun-1.png (3).png" id="1_cojbh"]
 [ext_resource type="Script" uid="uid://bqnsqcadhplyi" path="res://scripts/game/sun.gd" id="1_fdjia"]
+[ext_resource type="Texture2D" uid="uid://bdx4qemc7mo3k" path="res://images/spacebackround.png" id="1_t1pnj"]
+[ext_resource type="AudioStream" uid="uid://q8fbgamgsybf" path="res://SFX/spaceClick1.mp3" id="4_t1pnj"]
+[ext_resource type="AudioStream" uid="uid://coct2ec5aiene" path="res://SFX/spaceClickRare.mp3" id="5_t1pnj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fdjia"]
 radius = 66.37017
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6gpmc"]
-radius = 300.0
+radius = 400.0
 
 [node name="Sun" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(0, 117.49994)
+scale = Vector2(50, 50)
+texture = ExtResource("1_t1pnj")
 
 [node name="Sun" type="Area2D" parent="."]
 script = ExtResource("1_fdjia")
@@ -22,9 +34,18 @@ texture = ExtResource("1_cojbh")
 shape = SubResource("CircleShape2D_fdjia")
 
 [node name="Camera2D" type="Camera2D" parent="Sun"]
-zoom = Vector2(0.5, 0.5)
 
 [node name="VacuumArea" type="Area2D" parent="Sun"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sun/VacuumArea"]
 shape = SubResource("CircleShape2D_6gpmc")
+
+[node name="VacuumSound" type="AudioStreamPlayer2D" parent="Sun"]
+stream = ExtResource("4_t1pnj")
+volume_db = -5.0
+
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="Sun"]
+stream = ExtResource("5_t1pnj")
+volume_db = -10.0
+
+[connection signal="body_entered" from="Sun" to="Sun" method="_on_body_entered"]

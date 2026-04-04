@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c2osrk2fo4k26"
+path="res://.godot/imported/Teleport 1 - Sound effects Pack 2.ogg-2542d52e544343a41c10ce974942db9d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Sound effects Pack 2/Teleport/OGG/Teleport 1 - Sound effects Pack 2.ogg"
+dest_files=["res://.godot/imported/Teleport 1 - Sound effects Pack 2.ogg-2542d52e544343a41c10ce974942db9d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

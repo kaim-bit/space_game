@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bus4skbappwpt"
+path="res://.godot/imported/Random 2 - Sound effects Pack 2.wav-873d5881fb71fdda654a6063ee0c170c.sample"
+
+[deps]
+
+source_file="res://assets/Sound effects Pack 2/Random/WAV/Random 2 - Sound effects Pack 2.wav"
+dest_files=["res://.godot/imported/Random 2 - Sound effects Pack 2.wav-873d5881fb71fdda654a6063ee0c170c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

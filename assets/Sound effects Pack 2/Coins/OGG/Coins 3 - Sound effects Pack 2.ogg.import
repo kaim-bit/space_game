@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bc6ecknu8ss1h"
+path="res://.godot/imported/Coins 3 - Sound effects Pack 2.ogg-2581c7925cdf00626e49558dd3d4b3c5.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Sound effects Pack 2/Coins/OGG/Coins 3 - Sound effects Pack 2.ogg"
+dest_files=["res://.godot/imported/Coins 3 - Sound effects Pack 2.ogg-2581c7925cdf00626e49558dd3d4b3c5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

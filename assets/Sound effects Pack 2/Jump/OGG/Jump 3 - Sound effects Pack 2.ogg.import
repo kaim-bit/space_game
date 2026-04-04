@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cxsqyejs1n7k5"
+path="res://.godot/imported/Jump 3 - Sound effects Pack 2.ogg-d84e428f6fe9f3d9a391b161e777143f.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Sound effects Pack 2/Jump/OGG/Jump 3 - Sound effects Pack 2.ogg"
+dest_files=["res://.godot/imported/Jump 3 - Sound effects Pack 2.ogg-d84e428f6fe9f3d9a391b161e777143f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

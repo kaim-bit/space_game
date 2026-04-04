@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bk6tf3cde23s2"
+path="res://.godot/imported/Explosion 5 - Sound effects Pack 2.ogg-01284941a51a06a9cd26c0ee6441b5ba.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Sound effects Pack 2/Explosions/OGG/Explosion 5 - Sound effects Pack 2.ogg"
+dest_files=["res://.godot/imported/Explosion 5 - Sound effects Pack 2.ogg-01284941a51a06a9cd26c0ee6441b5ba.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rl0tn1hfbobu"
+path="res://.godot/imported/Hit 3 - Sound effects Pack 2.ogg-a230fc19f332031b065140940d7a604f.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Sound effects Pack 2/Hit/OGG/Hit 3 - Sound effects Pack 2.ogg"
+dest_files=["res://.godot/imported/Hit 3 - Sound effects Pack 2.ogg-a230fc19f332031b065140940d7a604f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

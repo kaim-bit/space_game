@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://byesq731i5od3"
+path="res://.godot/imported/Jump 10 - Sound effects Pack 2.mp3-e2159e45f4208082da19b22739593193.mp3str"
+
+[deps]
+
+source_file="res://assets/Sound effects Pack 2/Jump/MP3/Jump 10 - Sound effects Pack 2.mp3"
+dest_files=["res://.godot/imported/Jump 10 - Sound effects Pack 2.mp3-e2159e45f4208082da19b22739593193.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

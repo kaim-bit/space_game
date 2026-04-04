@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2b8hqu5qkg4a"
+path="res://.godot/imported/Coins 9 - Sound effects Pack 2.mp3-09cdf41bf1793594eb034e14938b744a.mp3str"
+
+[deps]
+
+source_file="res://assets/Sound effects Pack 2/Coins/MP3/Coins 9 - Sound effects Pack 2.mp3"
+dest_files=["res://.godot/imported/Coins 9 - Sound effects Pack 2.mp3-09cdf41bf1793594eb034e14938b744a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

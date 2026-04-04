@@ -1,12 +1,55 @@
-[gd_scene format=3 uid="uid://155xx7s6y6ta"]
+[gd_scene load_steps=14 format=3 uid="uid://155xx7s6y6ta"]
 
-[ext_resource type="Texture2D" uid="uid://bdx4qemc7mo3k" path="res://images/spacebackround.png" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://scenes/sun.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://hvgfi7tgf7ak" path="res://scripts/game/planet_spawner.gd" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bo0urvv5kw8g8" path="res://scenes/planet.tscn" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://b7qisq1lrte53" path="res://images/badEarth.png" id="3_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://kufddjeytqhe" path="res://images/badMars.png" id="4_trceg"]
+[ext_resource type="Texture2D" uid="uid://b6m7gw41ps7lq" path="res://assets/AssetJam/Moon.png" id="5_85g3d"]
+[ext_resource type="Texture2D" uid="uid://cg7i54omc6iwg" path="res://images/badneptune.png" id="5_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://bniyp0mtakheq" path="res://images/badUranus.png" id="6_jkv2x"]
+[ext_resource type="Texture2D" uid="uid://cx6fe63fgmg1p" path="res://images/badVenus.png" id="7_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://5wgm8s62jmev" path="res://scenes/pause_popup.tscn" id="7_tipki"]
+[ext_resource type="Texture2D" uid="uid://cxp2qc2nxwx12" path="res://images/TERRIBLEsaturn.png" id="8_muem4"]
+[ext_resource type="AudioStream" uid="uid://xm3x6djkuwkb" path="res://SFX/spaceSong.mp3" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://ijgad0k1ds12" path="res://scenes/game_popup.tscn" id="10_choun"]
 
-[node name="main" type="Node2D" unique_id=1745256660]
+[node name="main" type="Node2D"]
+script = ExtResource("1_sugp2")
+planet_scene = ExtResource("2_0wfyh")
+planet_textures = Array[Texture2D]([ExtResource("3_eb6dy"), ExtResource("4_trceg"), ExtResource("5_a8y0u"), ExtResource("6_jkv2x"), ExtResource("7_jbj1t"), ExtResource("8_muem4"), ExtResource("5_85g3d")])
 
-[node name="Spacebackround" type="Sprite2D" parent="." unique_id=270312358]
-position = Vector2(-9, 6)
-texture = ExtResource("1_0wfyh")
+[node name="Sun" parent="." instance=ExtResource("1_o5qli")]
 
-[node name="Sun" parent="." unique_id=1256527090 instance=ExtResource("1_o5qli")]
+[node name="Planet" parent="." instance=ExtResource("2_0wfyh")]
+position = Vector2(396, -313)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GamePopup" parent="CanvasLayer" instance=ExtResource("10_choun")]
+
+[node name="PausePopup" parent="CanvasLayer" instance=ExtResource("7_tipki")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_85g3d")
+volume_db = -10.0
+autoplay = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="UI"]
+offset_left = 35.0
+offset_top = 7.0
+offset_right = 186.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.13333334, 0.5568628, 0.27450982, 1)
+theme_override_font_sizes/font_size = 24
+text = "Planets Collected: 0"
+
+[node name="TimerLabel" type="Label" parent="UI"]
+offset_left = 891.0
+offset_top = 7.0
+offset_right = 1117.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.13333334, 0.5568628, 0.27450982, 1)
+theme_override_font_sizes/font_size = 24

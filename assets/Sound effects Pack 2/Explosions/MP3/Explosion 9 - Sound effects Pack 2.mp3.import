@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8ylooswe2lk3"
+path="res://.godot/imported/Explosion 9 - Sound effects Pack 2.mp3-82fe1ea7784d64c9ec59ec63cf24f23e.mp3str"
+
+[deps]
+
+source_file="res://assets/Sound effects Pack 2/Explosions/MP3/Explosion 9 - Sound effects Pack 2.mp3"
+dest_files=["res://.godot/imported/Explosion 9 - Sound effects Pack 2.mp3-82fe1ea7784d64c9ec59ec63cf24f23e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

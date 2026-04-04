@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://j0ynbo8lik8n"]
+[gd_scene load_steps=6 format=3 uid="uid://j0ynbo8lik8n"]
 
 [ext_resource type="Script" uid="uid://pvgoj5keh2g4" path="res://scripts/controls.gd" id="1_i2gav"]
+[ext_resource type="PackedScene" uid="uid://c3p1yh3qx832" path="res://scenes/music_player.tscn" id="2_5tddo"]
 
 [sub_resource type="SystemFont" id="SystemFont_3vx0d"]
 
@@ -51,5 +52,7 @@ theme_override_colors/font_color = Color(0.43529412, 0.56078434, 0.47843137, 1)
 theme_override_fonts/font = SubResource("SystemFont_i2gav")
 theme_override_font_sizes/font_size = 24
 text = "Back"
+
+[node name="MusicPlayer" parent="." instance=ExtResource("2_5tddo")]
 
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

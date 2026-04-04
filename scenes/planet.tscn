@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo0urvv5kw8g8"]
+
+[ext_resource type="Texture2D" uid="uid://jhc531f4spqh" path="res://assets/AssetJam/Earth.png" id="1_cktii"]
+[ext_resource type="Script" uid="uid://bs2q3memdhvyp" path="res://scripts/game/planet.gd" id="1_h8ms6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0wmcs"]
+radius = 20.0
+
+[node name="Planet" type="Node2D"]
+
+[node name="Earth" type="RigidBody2D" parent="." groups=["planets"]]
+gravity_scale = 0.0
+script = ExtResource("1_h8ms6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Earth"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_cktii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth"]
+shape = SubResource("CircleShape2D_0wmcs")
