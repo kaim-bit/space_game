@@ -1,8 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://sfu3t31qpxbp"]
+[gd_scene format=3 uid="uid://sfu3t31qpxbp"]
 
 [ext_resource type="Script" uid="uid://dme6e5pm6rmn2" path="res://scripts/start_menu.gd" id="1_8t08e"]
 [ext_resource type="PackedScene" uid="uid://c3p1yh3qx832" path="res://scenes/music_player.tscn" id="2_fx3ca"]
-[ext_resource type="AudioStream" uid="uid://btcpwrjndywuy" path="res://assets/SpaceAmbientMysic/ScifiAmbient.wav" id="3_j3bqk"]
+[ext_resource type="Texture2D" uid="uid://bdx4qemc7mo3k" path="res://images/spacebackround.png" id="2_j3bqk"]
 
 [sub_resource type="Theme" id="Theme_crxfe"]
 
@@ -22,7 +22,7 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h1lxu"]
 
-[node name="StartMenu" type="Control"]
+[node name="StartMenu" type="Control" unique_id=234926257]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,7 +31,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8t08e")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Spacebackround" type="Sprite2D" parent="." unique_id=1581349935]
+position = Vector2(494, 421)
+texture = ExtResource("2_j3bqk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=778325807]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,7 +45,7 @@ grow_vertical = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Game" type="Label" parent="VBoxContainer"]
+[node name="Game" type="Label" parent="VBoxContainer" unique_id=191189806]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.13475478, 0.5562947, 0.27542284, 1)
 theme_override_font_sizes/font_size = 36
@@ -49,7 +53,7 @@ text = "The Sun Is a Vacuum Cleaner"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Start" type="Button" parent="VBoxContainer"]
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=492274892]
 layout_mode = 2
 theme = SubResource("Theme_crxfe")
 theme_type_variation = &"FlatButton"
@@ -59,7 +63,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_fx3ca")
 text = "Start"
 
-[node name="Controls" type="Button" parent="VBoxContainer"]
+[node name="Controls" type="Button" parent="VBoxContainer" unique_id=670191589]
 layout_mode = 2
 theme = SubResource("Theme_j3bqk")
 theme_type_variation = &"FlatButton"
@@ -69,7 +73,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_yx83k")
 text = "Controls"
 
-[node name="End" type="Button" parent="VBoxContainer"]
+[node name="End" type="Button" parent="VBoxContainer" unique_id=1348704180]
 layout_mode = 2
 theme = SubResource("Theme_lynlw")
 theme_type_variation = &"FlatButton"
@@ -79,8 +83,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_h1lxu")
 text = "End"
 
-[node name="MusicPlayer" parent="." instance=ExtResource("2_fx3ca")]
-stream = ExtResource("3_j3bqk")
+[node name="MusicPlayer" parent="." unique_id=1266097357 instance=ExtResource("2_fx3ca")]
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Controls" to="." method="_on_controls_pressed"]
